@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesulayomi Micheal website | personal brand</title>
-    <link href="{% static 'css/work.css' %}" rel="stylesheet">
 </head>
 <body>
     <style>
         @font-face {
     font-family: 'Apoc';
-    src: url('../font/Apoc-Normal-Trial-Dark.otf') format('truetype');
+    src: url('../static/font/Apoc-Normal-Trial-Dark.otf') format('truetype');
     font-weight: 400;
 }
 
 
 @font-face {
     font-family: 'Apoc';
-    src: url('../font/Apoc-Normal-Trial-UltraBold.otf') format('truetype');
+    src: url('../static/font/Apoc-Normal-Trial-UltraBold.otf') format('truetype');
     font-weight: 600;
 }
 
@@ -581,7 +580,7 @@ body{
 
 
     <div id="home" class="hero-content">
-        <img id="hero-avatar" src="../static/img/imgpic1.png" alt="avatar">
+        <img id="hero-avatar" src="{% static 'img/imgpic1.png' %}" alt="avatar">
 
         <h1 id="hero-title">im Jesulayomi Micheal</h1>
 
@@ -605,7 +604,7 @@ body{
 
             <!-- Left Image -->
             <div class="about-image">
-                <img src="../static/img/imgpic3.png" alt="about image">
+                <img src="{% static 'img/imgpic3.png' %}" alt="about image">
             </div>
 
             <!-- Right Text -->
@@ -683,7 +682,7 @@ body{
         <!-- Card 1 -->
         <div class="feedback-card">
             <div class="user">
-                <img src="../static/img/imgpic4.png" alt="">
+                <img src="{% static 'img/imgpic4.png' %}" alt="">
                 <div>
                     <h3>Ruth Isichei</h3>
                     <span>Client</span>
@@ -698,7 +697,7 @@ body{
         <!-- Card 2 -->
         <div class="feedback-card">
             <div class="user">
-                <img src="../static/img/imgpic5.png" alt="">
+                <img src="{% static 'img/imgpic5.png' %}" alt="">
                 <div>
                     <h3>Amaan Raza</h3>
                     <span>Client</span>
@@ -713,7 +712,7 @@ body{
         <!-- Card 3 -->
         <div class="feedback-card">
             <div class="user">
-                <img src="../static/img/imgpic6.png" alt="">
+                <img src="{% static 'img/imgpic6.png' %}" alt="">
                 <div>
                     <h3>Zaeem Ahamed</h3>
                     <span>Client</span>
@@ -776,13 +775,13 @@ body{
 
         const slides = [
         {
-            image: "../static/img/imgpic1.png",
+            image: "{% static 'img/imgpic1.png' %}",
             title: "im Jesulayomi Micheal",
             desc: "Short-Form Video Strategist helping founders and coaches turn content into authority that attracts and converts clients." ,
             lettalk : false
         },
         {
-            image: "../static/img/imgpic2.png",
+            image: "{% static 'img/imgpic2.png' %}",
             title: "Build Amazing Products",
             desc: "lets talk right now!",
             lettalk : true

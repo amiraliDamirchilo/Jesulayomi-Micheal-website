@@ -115,4 +115,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+import os
+# مسیر پوشه استاتیک اپلیکیشن شما
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'work1', 'work', 'static'),
+]
+
+# مسیر نهایی که ورسل فایل‌ها را در آن جمع‌آوری می‌کند
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
