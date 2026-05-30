@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhitenoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -117,10 +119,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 import os
-# مسیر پوشه استاتیک اپلیکیشن شما
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'work1', 'work', 'static'),
-]
+STATIC_DIRS = [os.path.join(BASE_DIR , 'work/static')]
 
-# مسیر نهایی که ورسل فایل‌ها را در آن جمع‌آوری می‌کند
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT= os.path.join(BASE_DIR , 'staticfiles')
